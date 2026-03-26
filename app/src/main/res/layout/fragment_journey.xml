@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⛰️ "
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summit Tracker"
+                android:textColor="#0F172A"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Climb your way to fitness, one step at a time"
+            android:textAlignment="center"
+            android:textColor="#64748B"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="24dp"
+            android:baselineAligned="false">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="#2563EB"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="◎ Steps Today" android:textColor="#E0E7FF" android:textSize="10sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7,234" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2,766 to goal" android:textColor="#E0E7FF" android:textSize="9sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                app:cardBackgroundColor="#FF5722"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔥 Calories" android:textColor="#FFEDE5" android:textSize="10sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="289" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="kcal" android:textColor="#FFEDE5" android:textSize="9sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardBackgroundColor="#059669"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📈 Distance" android:textColor="#D1FAE5" android:textSize="10sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.51" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="kilometers" android:textColor="#D1FAE5" android:textSize="9sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Journey to the Summit"
+                    android:textAlignment="center"
+                    android:textColor="#0F172A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Watch your avatar climb Mount Everest as you reach your daily goal"
+                    android:textAlignment="center"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="24dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="24dp">
+
+                    <ImageView
+                        android:id="@+id/mountain_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mountain_bg" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="20dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="12dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="You are 72.3%"
+                                android:textColor="#0F172A"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="up Mt. Everest!"
+                                android:textColor="#0F172A"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <androidx.cardview.widget.CardView android:layout_width="10dp" android:layout_height="10dp" app:cardBackgroundColor="#3B82F6" app:cardCornerRadius="5dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Progress" android:textSize="11sp" android:layout_marginEnd="24dp"/>
+
+                        <androidx.cardview.widget.CardView android:layout_width="10dp" android:layout_height="10dp" app:cardBackgroundColor="#94A3B8" app:cardCornerRadius="5dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trail to Summit" android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <androidx.cardview.widget.CardView android:layout_width="14dp" android:layout_height="10dp" app:cardBackgroundColor="#E2E8F0" app:cardCornerRadius="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inactive Periods" android:textSize="11sp" android:layout_marginEnd="24dp"/>
+
+                        <androidx.cardview.widget.CardView android:layout_width="10dp" android:layout_height="10dp" app:cardBackgroundColor="#10B981" app:cardCornerRadius="5dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Checkpoint Reached" android:textSize="11sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#D946EF"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Equivalent Distance"
+                    android:textColor="#FDF4FF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ You've walked 84.8% of Hollywood Walk of Fame!"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LA's star-studded sidewalk"
+                    android:textColor="#FDF4FF"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💡 Tip: Stay active throughout the day to avoid foggy patches on your mountain trail!"
+                android:textAlignment="center"
+                android:textColor="#475569"
+                android:textSize="11sp"
+                android:padding="12dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
