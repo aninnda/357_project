@@ -1,5 +1,7 @@
 package com.example.walkr;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,24 +20,38 @@ public class SettingsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // MATCHING THE XML: Using standard CardView here
         CardView cardSahara = view.findViewById(R.id.card_sahara);
         CardView cardEverest = view.findViewById(R.id.card_everest);
         ImageView checkSahara = view.findViewById(R.id.check_sahara);
         ImageView checkEverest = view.findViewById(R.id.check_everest);
 
-        // Only set listeners if the views were actually found
         if (cardSahara != null && checkSahara != null && cardEverest != null && checkEverest != null) {
 
-            cardSahara.setOnClickListener(v -> {
-                // Standard CardViews don't have stroke borders, so we just toggle the checkmarks
+            // Get the shared preferences database
+            SharedPreferences prefs = requireActivity().getSharedPreferences("WalkrPrefs", Context.MODE_PRIVATE);
+
+            // Set initial state based on saved preferences (so it remembers when you reopen the app)
+            String activeJourney = prefs.getString("active_journey", "everest");
+            if (activeJourney.equals("sahara")) {
                 checkSahara.setVisibility(View.VISIBLE);
                 checkEverest.setVisibility(View.GONE);
+            } else {
+                checkEverest.setVisibility(View.VISIBLE);
+                checkSahara.setVisibility(View.GONE);
+            }
+
+            cardSahara.setOnClickListener(v -> {
+                checkSahara.setVisibility(View.VISIBLE);
+                checkEverest.setVisibility(View.GONE);
+                // Save "sahara" to preferences
+                prefs.edit().putString("active_journey", "sahara").apply();
             });
 
             cardEverest.setOnClickListener(v -> {
                 checkEverest.setVisibility(View.VISIBLE);
                 checkSahara.setVisibility(View.GONE);
+                // Save "everest" to preferences
+                prefs.edit().putString("active_journey", "everest").apply();
             });
 
         } else {

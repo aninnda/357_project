@@ -19,12 +19,14 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/tv_header_emoji"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⛰️ "
                 android:textSize="28sp" />
 
             <TextView
+                android:id="@+id/tv_header_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Summit Tracker"
@@ -34,6 +36,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_header_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Climb your way to fitness, one step at a time"
@@ -119,6 +122,7 @@
                 android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/tv_card_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Your Journey to the Summit"
@@ -128,6 +132,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_card_subtitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Watch your avatar climb Mount Everest as you reach your daily goal"
@@ -142,7 +147,7 @@
                     android:layout_marginBottom="24dp">
 
                     <ImageView
-                        android:id="@+id/mountain_image"
+                        android:id="@+id/iv_main_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
@@ -173,6 +178,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tv_progress_line2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="up Mt. Everest!"
@@ -202,7 +208,7 @@
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Progress" android:textSize="11sp" android:layout_marginEnd="24dp"/>
 
                         <androidx.cardview.widget.CardView android:layout_width="10dp" android:layout_height="10dp" app:cardBackgroundColor="#94A3B8" app:cardCornerRadius="5dp" android:layout_marginEnd="6dp"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trail to Summit" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tv_legend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trail to Summit" android:textSize="11sp"/>
                     </LinearLayout>
 
                     <LinearLayout
