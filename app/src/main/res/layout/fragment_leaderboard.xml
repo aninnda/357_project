@@ -90,6 +90,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_sarah_cheers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sarah Chen  ❤️ 12"
@@ -105,6 +106,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/btn_cheer_sarah"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:backgroundTint="#D946EF"
@@ -144,6 +146,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_marcus_cheers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Marcus Johnson  ❤️ 8"
@@ -159,6 +162,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/btn_cheer_marcus"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:backgroundTint="#D946EF"
@@ -198,6 +202,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_emma_cheers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Emma Rodriguez  ❤️ 15"
@@ -213,6 +218,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/btn_cheer_emma"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:backgroundTint="#D946EF"
@@ -254,6 +260,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_user_cheers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="You  ❤️ 6"
@@ -269,6 +276,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/btn_cheer_user"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:backgroundTint="#D946EF"
